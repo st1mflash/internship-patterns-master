@@ -7,8 +7,8 @@ import ru.liga.internshippatterns.model.role.VipManager;
 
 import java.math.BigDecimal;
 
-public class ManagerFactory {
-    public Employee createManager(BigDecimal amountCredit) {
+public class EmployeeFactory {
+    public Employee appointEmployeeByCreditAmount(BigDecimal amountCredit) {
         if (amountCredit.compareTo(BigDecimal.valueOf(10000)) < 0) {
             return new Manager("Иван Иванович ОбычныйМенеджер");
         } else if (amountCredit.compareTo(BigDecimal.valueOf(50000)) < 0) {

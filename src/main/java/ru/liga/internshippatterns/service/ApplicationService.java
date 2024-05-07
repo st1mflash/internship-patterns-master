@@ -1,10 +1,8 @@
 package ru.liga.internshippatterns.service;
 
 import ru.liga.internshippatterns.model.Application;
-import ru.liga.internshippatterns.model.factory.ManagerFactory;
+import ru.liga.internshippatterns.model.factory.EmployeeFactory;
 import ru.liga.internshippatterns.model.role.*;
-
-import java.math.BigDecimal;
 
 public class ApplicationService {
 
@@ -13,7 +11,7 @@ public class ApplicationService {
      * @param application - заявка
      */
     public void sendOnApprove(Application application) {
-        Employee employee = new ManagerFactory().createManager(application.getCreditAmount());
+        Employee employee = new EmployeeFactory().appointEmployeeByCreditAmount(application.getCreditAmount());
         employee.handlingApplication(application);
 
         System.out.println("Заявка на кредит была обработана, одобрена и подписана. ");
