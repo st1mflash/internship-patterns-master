@@ -24,18 +24,14 @@ public class Client {
      */
     public Application createApplication(BigDecimal creditAmount, int creditTerm) {
 
-        Application application = new Application(
+        Application application = new Application.ApplicationBuilder(
                 "Кредитная заявка для клиента " + fio,
                 this,
                 creditAmount,
-                creditTerm,
-                null,
-                ApplicationStatus.NEW,
-                null,
-                null,
-                null,
-                null);
-
+                creditTerm
+        )
+                .status(ApplicationStatus.NEW)
+                .build();
 
         System.out.println("Клиент завел заявку на кредит: " + application);
         System.out.println("________________________________________________________");
