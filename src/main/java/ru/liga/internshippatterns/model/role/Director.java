@@ -1,9 +1,8 @@
 package ru.liga.internshippatterns.model.role;
 
 import ru.liga.internshippatterns.model.Application;
-import ru.liga.internshippatterns.model.ApplicationStatus;
 
-public class Director implements ManagerRole   {
+public class Director extends Employee {
     private final String fio;
 
     public Director(String fio) {
@@ -11,7 +10,7 @@ public class Director implements ManagerRole   {
     }
 
     @Override
-    public void sign(Application application) {
+    public void signApplication(Application application) {
         application.setApprovedBy("Директор филиала: " + fio);
     }
 }

@@ -2,10 +2,8 @@ package ru.liga.internshippatterns.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.liga.internshippatterns.model.role.ManagerRole;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -51,6 +49,7 @@ public class Application {
         this.rate = applicationBuilder.rate;
         this.eir = applicationBuilder.eir;
     }
+
     public static class ApplicationBuilder {
         private String name;
         private Client client;
@@ -129,19 +128,20 @@ public class Application {
             return new Application(this);
         }
     }
+
     @Override
     public String toString() {
         return "Application{" +
-               "name='" + name + '\'' +
-               ", client=" + client.getFio() +
-               ", creditAmount=" + creditAmount +
-               ", creditTerm=" + creditTerm +
-               ", product='" + product + '\'' +
-               ", status=" + status +
-               ", approvedBy='" + approvedBy + '\'' +
-               ", creditPurpose='" + creditPurpose + '\'' +
-               ", rate=" + rate +
-               ", eir=" + eir +
-               '}';
+                "name='" + name + '\'' +
+                ", client=" + client.getFio() +
+                ", creditAmount=" + creditAmount +
+                ", creditTerm=" + creditTerm +
+                ", product='" + product + '\'' +
+                ", status=" + status +
+                ", approvedBy='" + approvedBy + '\'' +
+                ", creditPurpose='" + creditPurpose + '\'' +
+                ", rate=" + rate +
+                ", eir=" + eir +
+                '}';
     }
 }
