@@ -11,7 +11,7 @@ public class ApplicationService {
      * @param application - заявка
      */
     public void sendOnApprove(Application application) {
-        Employee employee = new EmployeeFactory().appointEmployeeByCreditAmount(application.getCreditAmount());
+        Employee employee = new EmployeeFactory().createEmployeeByCreditAmount(application.getCreditAmount());
         employee.handlingApplication(application);
 
         System.out.println("Заявка на кредит была обработана, одобрена и подписана. ");
