@@ -2,7 +2,7 @@ package ru.liga.internshippatterns.model.role;
 
 import ru.liga.internshippatterns.model.Application;
 
-public class VipManager extends Employee {
+public class VipManager extends EmployeeManager {
     private final String fio;
 
     public VipManager(String fio) {
