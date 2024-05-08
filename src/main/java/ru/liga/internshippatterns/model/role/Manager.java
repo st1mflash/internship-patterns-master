@@ -2,7 +2,7 @@ package ru.liga.internshippatterns.model.role;
 
 import ru.liga.internshippatterns.model.Application;
 
-public class Manager extends EmployeeManager {
+public class Manager extends Employee {
     private final String fio;
 
     public Manager(String fio) {
