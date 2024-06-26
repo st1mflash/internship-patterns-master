@@ -13,7 +13,7 @@ public class ScoringWithTiming extends ScoringServiceCachedProxyImpl {
         long startTime = System.currentTimeMillis();
         ScoringResult scoringResult = super.getScoringResult(application);
         long endTime = System.currentTimeMillis();
-        System.out.println("Заявка " + application.getName() + " - скоринг завершен за " + (endTime - startTime) + " ms");
+        System.out.println("Заявка '" + application.getName() + "' - скоринг завершен за " + (endTime - startTime) + " ms");
         return scoringResult;
     }
 }
